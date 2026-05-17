@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="GreenKart Full Test Suite" verbose="1">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env"     value="staging"/>
+
+    <!-- TestNG direct tests -->
+    <test name="Home Page Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.greenkart.tests.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.greenkart.tests.CartTest"/>
+        </classes>
+    </test>
+
+    <test name="E2E Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="e2e"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.greenkart.tests.E2ETest"/>
+        </classes>
+    </test>
+
+    <!-- Cucumber BDD Tests -->
+    <test name="Cucumber BDD Tests">
+        <classes>
+            <class name="com.greenkart.runners.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="GreenKart Smoke Suite" verbose="1">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env"     value="staging"/>
+
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.greenkart.tests.HomePageTest"/>
+            <class name="com.greenkart.tests.CartTest"/>
+            <class name="com.greenkart.tests.E2ETest"/>
+        </classes>
+    </test>
+
+    <test name="Cucumber Smoke">
+        <classes>
+            <class name="com.greenkart.runners.SmokeTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

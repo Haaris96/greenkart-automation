@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  Parallel suite:
+  - TestNG tests run in parallel at the 'methods' level (4 threads)
+  - Cucumber BDD uses ParallelTestRunner with @DataProvider(parallel=true)
+-->
+<suite name="GreenKart Parallel Suite" verbose="1" parallel="methods" thread-count="4">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env"     value="staging"/>
+
+    <test name="Home Page Tests - Parallel">
+        <classes>
+            <class name="com.greenkart.tests.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Tests - Parallel">
+        <classes>
+            <class name="com.greenkart.tests.CartTest"/>
+        </classes>
+    </test>
+
+    <test name="E2E Tests - Parallel">
+        <classes>
+            <class name="com.greenkart.tests.E2ETest"/>
+        </classes>
+    </test>
+
+    <test name="Cucumber BDD Parallel">
+        <classes>
+            <class name="com.greenkart.runners.ParallelTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

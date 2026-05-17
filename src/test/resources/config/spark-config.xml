@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>dark</theme>
+        <encoding>UTF-8</encoding>
+        <documentTitle>GreenKart Test Report</documentTitle>
+        <reportName>GreenKart Automation Suite</reportName>
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+        <js></js>
+        <css></css>
+    </configuration>
+</extentreports>
